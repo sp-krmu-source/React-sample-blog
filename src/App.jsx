@@ -8,7 +8,7 @@ import Navbar from './components/Navbar'
 import Technology from './components/Technology'
 import Fitness from './components/Fitness'
 import Food from './components/Food'
-
+import Details from './components/Details'
 
 const App = () => {
   return (
@@ -16,7 +16,10 @@ const App = () => {
       <BrowserRouter>
       
         <Navbar/>
-
+<br/>
+<br/>
+<br/>
+<br/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bollywood" element={<Bollywood />} />
@@ -24,6 +27,7 @@ const App = () => {
           <Route path="/technology" element={<Technology />} />
           <Route path="/fitness" element={<Fitness />} />
           <Route path="/food" element={<Food />} />
+          <Route path="/post/:id" element={<Details />} />
         </Routes>
       </BrowserRouter>
     </div>
