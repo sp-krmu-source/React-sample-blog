@@ -4,19 +4,18 @@ import { Link } from 'react-router-dom';
 
 const Bollywood = () => {
 
-    const BollywoodData = Data.filter((item)=>item.category==="Bollywood");
-    console.log(BollywoodData)
+  const BollywoodData = Data.filter((item) => item.category === "Bollywood");
+  console.log(BollywoodData)
 
   return (
     <div>
-        {BollywoodData.map((bollydata)=>(
-          <Link to={`/post/${bollydata.id}`} key={bollydata.id}>
-          
-             <h1>{bollydata.title}</h1>
-             <img src={bollydata.img_url}/>
-             </Link>
-        ))}
-        </div>
+      {BollywoodData.map((bollydata) => (
+        <>
+          <h1>{bollydata.title}</h1>
+          <img src={bollydata.img_url} />
+        </>
+      ))}
+    </div>
   )
 }
 
