@@ -1,4 +1,5 @@
-import React from 'react'
+
+import React, { useContext, useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
 import Bollywood from './components/Bollywood'
@@ -9,10 +10,14 @@ import Technology from './components/Technology'
 import Fitness from './components/Fitness'
 import Food from './components/Food'
 import Details from './components/Details'
+import { ThemeContext } from './context/ThemeContext'
 
 const App = () => {
+  
+  const {theme} = useContext(ThemeContext)
+
   return (
-    <div>
+    <div className={theme}>
       <BrowserRouter>
         <Navbar/>
 <br/>

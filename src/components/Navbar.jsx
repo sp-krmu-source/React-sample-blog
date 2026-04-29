@@ -1,8 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+
 const Navbar = () => {
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <div>
+      <h1>SP</h1>
+
+      <button onClick={toggleTheme}>
+        Switch to {theme === "light" ? "Dark 🌙" : "Light ☀️"}
+      </button>
+      
       <Link to="/">Home</Link>
       <Link to="/bollywood">Bollywood</Link>
       <Link to="/hollywood">Hollywood</Link>
@@ -29,6 +42,7 @@ export default Navbar
 // ]
 
 // const Navbar = () => {
+
 //   const [menuOpen, setMenuOpen] = useState(false)
 //   const [scrolled, setScrolled] = useState(false)
 //   const [hoveredIndex, setHoveredIndex] = useState(null)

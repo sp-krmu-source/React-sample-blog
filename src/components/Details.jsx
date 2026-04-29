@@ -13,7 +13,6 @@ const Details = () => {
     <>    
     <button onClick={()=>navigate(-1)}>Back</button>
     <div>
-
        <h1> {post.title}</h1>
        <img src={post.img_url}/>
        <p>{post.description}</p>
